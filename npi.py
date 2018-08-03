@@ -66,6 +66,21 @@ print(new_array)
 new_array2 = np.linspace(0.01,1,100).reshape(10,10)
 print(new_array2)
 
+arr7 = np.linspace(0,1,20)
+print(arr7)
+
+
+mat = np.arange(1,26).reshape(5,5)
+print(mat)
+print(mat[2:,1:])
+print(mat[3,4])
+print(mat[:3,1:2])
+print(mat[4])
+print(mat[3:])
+
+#Get the sum of all the values in mat
+print(np.sum(mat))
+
 
 
 
