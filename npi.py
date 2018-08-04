@@ -81,6 +81,11 @@ print(mat[3:])
 #Get the sum of all the values in mat
 print(np.sum(mat))
 
+#Get the standard deviation of the values in mat
+print(np.std(mat))
+
+#Get the sum of all the columns in mat
+print(mat.sum(axis=0))
 
 
 
