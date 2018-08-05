@@ -34,3 +34,12 @@ print(resultdf['X'])
 
 #but this the smoothest way to do this is by combuining the two steps.
 print(df[df['W']>0]['X'])
+#you can even do this with selecting multiple columns
+print(df[df['W']>0][['Y','X']])
+
+boolser = df['W']>0
+result = df[boolser]
+mycols = ['Y','X']
+#or all together
+print(df[df['W']>0][['Y','X']])
+
