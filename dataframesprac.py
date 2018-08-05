@@ -24,3 +24,13 @@ booldf = df > 0
 print(booldf)
 #conditional selection with bracket notation to bring back numbers
 print(df[booldf])
+
+#a subset of the dataframe where only rows in column W that are greater than 0 are returned.
+resultdf = df[df['W']>0]
+print(resultdf)
+
+#you can grab a subset off of a subset for example:
+print(resultdf['X'])
+
+#but this the smoothest way to do this is by combuining the two steps.
+print(df[df['W']>0]['X'])
