@@ -43,3 +43,5 @@ mycols = ['Y','X']
 #or all together
 print(df[df['W']>0][['Y','X']])
 
+print(df[(df['W']>0) & (df['Y']>1)])
+
