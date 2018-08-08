@@ -43,5 +43,46 @@ mycols = ['Y','X']
 #or all together
 print(df[df['W']>0][['Y','X']])
 
+#you can't use normal and/or operator words, you must use &(for and) and |(for or)
 print(df[(df['W']>0) & (df['Y']>1)])
+print(df[(df['W']>0) | (df['Y']>1)])
+
+#to reset your index to numerical values
+print(df.reset_index())
+
+
+#a nice trick to make a particular column your new index for the data frame
+newind = 'CA NY WY OR CO'.split()
+print(newind)
+df['States'] = newind
+print(df.set_index('States'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
