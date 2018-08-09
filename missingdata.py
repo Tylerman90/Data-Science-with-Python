@@ -11,3 +11,12 @@ print(df.dropna())
 
 #to drop null values along columns. argument axis=1
 print(df.dropna(axis=1))
+
+#set a threshold value that to determine atleast how many null values need to
+#be present in order for your row or column to be dropped.
+print(df.dropna(thresh=2))
+
+#to fill in your null values
+print(df.fillna(value='FILL VALUE'))
+
+print(df['A'].fillna(value=df['A'].mean()))
