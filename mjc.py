@@ -17,3 +17,14 @@ df3 = pd.DataFrame({'A': ['A8','A9','A10','A11'],
 	'C': ['C8','C9','C10','C11'],
 	'D': ['D8','D9','D10','D11']},
 	index=[8,9,10,11])
+
+print(df1)
+print(df2)
+print(df3)
+
+#examples of concatenating data sets
+#concatenation along rows
+print(pd.concat([df1,df2,df3]))
+#concatenation along columns
+print(pd.concat([df1,df2,df3],axis=1))
+
