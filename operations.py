@@ -22,3 +22,9 @@ def times2(x):
 
 #the apply function allows you to apply your own custom functions to your dataframes
 print(df['col1'].apply(times2))
+
+#you can also use the apply function to for strings, for example:
+print(df['col3'].apply(len))
+
+#the apply function is especially useful with lamda functions
+print(df['col2'].apply(lambda x: x*2))
