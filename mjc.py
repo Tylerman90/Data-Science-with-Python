@@ -53,16 +53,16 @@ right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
 	'D': ['D0', 'D1','D2', 'D3']})
 
 #merging with multiple keys
-#inner join on multiple keys
+#inner merge on multiple keys
 print(pd.merge(left, right, on=['key1', 'key2']))
 
-#outer join on multiple keys
+#outer merge on multiple keys
 print(pd.merge(left, right, how='outer', on=['key1', 'key2']))
 
-#right join on multiple keys
+#right merge on multiple keys
 print(pd.merge(left, right, how='right', on=['key1', 'key2']))
 
-#left join on multiple keys
+#left merge on multiple keys
 print(pd.merge(left, right, how='left', on=['key1', 'key2']))
 
 left = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
@@ -72,6 +72,21 @@ left = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
 right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
 	'D': ['D0', 'D2', 'D3']},
 	index=['K0', 'K2', 'K3'])
+
+#to join two DataFrames
+#left join
+print(left.join(right))
+
+#right join
+print(right.join(left))
+
+#you can even use different joins
+#outer join
+print(left.join(right, how='outer'))
+#inner join
+print(left.join(right, how='inner'))
+
+
 
 
 
