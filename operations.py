@@ -26,5 +26,29 @@ print(df['col1'].apply(times2))
 #you can also use the apply function to for strings, for example:
 print(df['col3'].apply(len))
 
-#the apply function is especially useful with lamda functions
+#the apply function is especially useful with lamda expressions
 print(df['col2'].apply(lambda x: x*2))
+
+#to organize your columns
+print(df.sort_values('col2'))
+
+#to find null values in your data set
+print(df.isnull())
+
+#new DataFrame
+data = {'A':['foo','foo','foo','bar','bar','bar'],
+		'B':['one','one','two','two','one','one'],
+		'C':['x','y','x','y','x','y'],
+		'D':[1,3,2,5,4,1]}
+
+df = pd.DataFrame(data)
+print(df)
+
+#to create a pivot table
+df.pivot_table(values='D',index=['A','B'],columns=['C'])
+
+
+
+
+
+
