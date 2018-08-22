@@ -1,7 +1,7 @@
 import pandas as pd
 
 #import csv files
-
+pd.read_csv('example.csv')
 #import excel files
 
 #import html files
